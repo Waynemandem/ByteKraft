@@ -58,14 +58,14 @@ const WORKS = [
 ];
 
 const STATS = [
-  { val: "40+", label: "Projects Shipped" },
+  { val: "2+", label: "Projects Shipped" },
   { val: "3", label: "Chains Supported" },
   { val: "98%", label: "Client Retention" },
   { val: "2", label: "Countries" },
 ];
 
 const NAV = ["Services", "Work", "Stack", "Contact"];
-const GREEN = "#30D158";
+const GREEN = "#06b646";
 
 /* ─── COMPONENT ─────────────────────────────────────────── */
 export default function ByteKraft() {
@@ -177,11 +177,8 @@ export default function ByteKraft() {
             <p style={{ fontFamily: "'Outfit', sans-serif", fontSize: 12, fontWeight: 600, letterSpacing: ".18em", color: GREEN, marginBottom: 24, textTransform: "uppercase" }}>
               Software Agency
             </p>
-            <h1 style={{ fontFamily: "'Outfit', sans-serif", fontWeight: 700, fontSize: "clamp(42px, 5.5vw, 80px)", lineHeight: 1.03, letterSpacing: "-.04em", marginBottom: 24 }}>
-              We build<br />software<br />that works.
-            </h1>
             <p style={{ fontSize: "clamp(15px, 1.8vw, 18px)", lineHeight: 1.7, marginBottom: 40, fontWeight: 400, maxWidth: 440 }}>
-              ByteKraft ships Web3 infrastructure and business-grade web products — from DeFi protocols to e-commerce platforms.
+              ByteKraft ships Web3 infrastructure and business-grade web products from DeFi protocols to e-commerce platforms.
             </p>
             <div style={{ display: "flex", gap: 12, flexWrap: "wrap", marginBottom: 64 }}>
               <a href="#services" style={{ background: fg, color: bg, textDecoration: "none", borderRadius: 100, padding: "13px 28px", fontSize: 14, fontWeight: 600, display: "inline-block" }}
@@ -301,14 +298,14 @@ export default function ByteKraft() {
             <div style={{ border: `1px solid ${bdr}`, borderRadius: 14, overflow: "hidden" }}>
               {/* Card header */}
               <div style={{ padding: "18px 28px", borderBottom: `1px solid ${bdr}`, background: dark ? "#0d0d0d" : "#ececec" }}>
-                <span style={{ fontFamily: "'DM Mono', 'Space Mono', monospace", fontSize: 10, fontWeight: 700, letterSpacing: ".22em", color: fg, opacity: .45, textTransform: "uppercase" }}>Our Stack</span>
+                <span style={{ fontFamily: "'DM Mono', 'Space Mono', monospace", fontSize: 10, fontWeight: 700, letterSpacing: ".22em", color: fg, opacity: 1, textTransform: "uppercase" }}>Our Stack</span>
               </div>
               {/* Rows */}
               {STACK.map((row, i) => (
                 <div key={row.label} style={{ display: "flex", justifyContent: "space-between", alignItems: "center", padding: "18px 28px", borderBottom: i < STACK.length - 1 ? `1px solid ${bdr}` : "none", background: bg, transition: "background .18s" }}
                   onMouseEnter={e => e.currentTarget.style.background = dark ? "#111" : "#f5f5f7"}
                   onMouseLeave={e => e.currentTarget.style.background = bg}>
-                  <span style={{ fontFamily: "'DM Mono', 'Space Mono', monospace", fontSize: 12, color: fg, opacity: .4, letterSpacing: ".04em" }}>{row.label}</span>
+                  <span style={{ fontFamily: "'DM Mono', 'Space Mono', monospace", fontSize: 12, color: fg, opacity: 1, letterSpacing: ".04em" }}>{row.label}</span>
                   <span style={{ fontSize: 14, fontWeight: 600, color: fg, textAlign: "right" }}>{row.value}</span>
                 </div>
               ))}
@@ -365,11 +362,9 @@ export default function ByteKraft() {
       <section id="contact" style={{ padding: "120px 0", background: fg, color: bg, textAlign: "center", transition: "background .3s, color .3s" }}>
         <div style={{ maxWidth: 640, margin: "0 auto" }}>
           <p style={{ fontSize: 12, fontWeight: 700, letterSpacing: ".18em", color: GREEN, marginBottom: 24, textTransform: "uppercase" }}>Ready to Build?</p>
-          <h2 style={{ fontFamily: "'Outfit', sans-serif", fontSize: "clamp(36px, 6vw, 72px)", fontWeight: 700, letterSpacing: "-.04em", lineHeight: 1.05, marginBottom: 24 }}>
-            Let's turn your<br />idea into a product.
-          </h2>
+          
           <p style={{ fontSize: 17, lineHeight: 1.65, marginBottom: 48, opacity: .7 }}>
-            Drop us a line. We'll scope it, price it, and ship it — no fluff.
+            Drop us a line. We'll scope it, price it, and ship it.
           </p>
           <div style={{ display: "flex", gap: 10, maxWidth: 460, margin: "0 auto 16px", flexWrap: "wrap" }}>
             <input
@@ -381,7 +376,7 @@ export default function ByteKraft() {
               Get Started →
             </button>
           </div>
-          <p style={{ fontSize: 12, opacity: .4, letterSpacing: ".06em" }}>REPLY WITHIN 24 HOURS · NO COMMITMENT</p>
+          <p style={{ fontSize: 12, opacity: .4, letterSpacing: ".06em" }}>· REPLY WITHIN 24 HOURS · </p>
         </div>
       </section>
 
@@ -396,7 +391,7 @@ export default function ByteKraft() {
               <a key={l} href="#" style={{ color: fg, textDecoration: "none", fontSize: 13, fontWeight: 500, opacity: .45 }}>{l}</a>
             ))}
           </div>
-          <span style={{ fontSize: 12, opacity: .3, letterSpacing: ".04em" }}>© 2025 BYTEKRAFT</span>
+          <span style={{ fontSize: 12, opacity: .3, letterSpacing: ".04em" }}>© 2026 BYTEKRAFT</span>
         </div>
       </footer>
     </div>
@@ -416,6 +411,7 @@ function Label({ fg, green, children }) {
 const css = `
   @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=DM+Sans:wght@400;500;600&display=swap');
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { width: 100%; overflow-x: hidden; }
   html { scroll-behavior: smooth; }
   body { -webkit-font-smoothing: antialiased; }
 
