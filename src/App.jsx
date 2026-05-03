@@ -411,7 +411,8 @@ function Label({ fg, green, children }) {
 const css = `
   @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=DM+Sans:wght@400;500;600&display=swap');
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-  html, body { width: 100%; overflow-x: hidden; }
+   html, body { width: 100%; overflow-x: hidden; margin: 0; padding: 0; }
+  #root { width: 100%; max-width: 100% !important; margin: 0 !important; padding: 0 !important; }
   html { scroll-behavior: smooth; }
   body { -webkit-font-smoothing: antialiased; }
 
