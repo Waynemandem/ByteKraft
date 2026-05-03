@@ -61,7 +61,7 @@ const STATS = [
   { val: "40+", label: "Projects Shipped" },
   { val: "3", label: "Chains Supported" },
   { val: "98%", label: "Client Retention" },
-  { val: "12", label: "Countries" },
+  { val: "2", label: "Countries" },
 ];
 
 const NAV = ["Services", "Work", "Stack", "Contact"];
@@ -72,6 +72,7 @@ export default function ByteKraft() {
   const [dark, setDark] = useState(true);
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
 
   useEffect(() => {
     const fn = () => setScrolled(window.scrollY > 10);
@@ -79,9 +80,12 @@ export default function ByteKraft() {
     return () => window.removeEventListener("scroll", fn);
   }, []);
 
-  // Close menu on resize to desktop
   useEffect(() => {
-    const fn = () => { if (window.innerWidth > 768) setMenuOpen(false); };
+    const fn = () => {
+      const mobile = window.innerWidth <= 768;
+      setIsMobile(mobile);
+      if (!mobile) setMenuOpen(false);
+    };
     window.addEventListener("resize", fn);
     return () => window.removeEventListener("resize", fn);
   }, []);
@@ -98,57 +102,70 @@ export default function ByteKraft() {
 
       {/* ══ NAV ══ */}
       <header style={{ position: "fixed", top: 0, left: 0, right: 0, zIndex: 200, background: navBg, backdropFilter: scrolled ? "blur(20px)" : "none", WebkitBackdropFilter: scrolled ? "blur(20px)" : "none", borderBottom: scrolled ? `1px solid ${bdr}` : "1px solid transparent", transition: "all .3s" }}>
-        <div className="container" style={{ display: "flex", alignItems: "center", justifyContent: "space-between", height: 60, width: "100%" }}>
+        <div className="container" style={{ display: "flex", alignItems: "center", justifyContent: "space-between", height: 64, width: "100%" }}>
 
           {/* Logo */}
-          <a href="#" style={{ textDecoration: "none", color: fg, fontFamily: "'Outfit', sans-serif", fontWeight: 700, fontSize: 18, letterSpacing: "-.02em" }}>
+          <a href="#" style={{ textDecoration: "none", color: fg, fontFamily: "'Outfit', sans-serif", fontWeight: 700, fontSize: 18, letterSpacing: "-.02em", flexShrink: 0 }}>
             Byte<span style={{ color: GREEN }}>Kraft</span>
           </a>
 
-          {/* Desktop nav */}
-          <nav className="desk-nav" style={{ display: "flex", alignItems: "center", gap: 36 }}>
-            {NAV.map(n => (
-              <a key={n} href={`#${n.toLowerCase()}`} style={{ color: fg, textDecoration: "none", fontSize: 14, fontWeight: 500, letterSpacing: ".01em" }}
-                onClick={() => setMenuOpen(false)}>
-                {n}
-              </a>
-            ))}
-          </nav>
+          {/* ── DESKTOP NAV ── */}
+          {!isMobile && (
+            <nav style={{ display: "flex", alignItems: "center", gap: 36 }}>
+              {NAV.map(n => (
+                <a key={n} href={`#${n.toLowerCase()}`} style={{ color: fg, textDecoration: "none", fontSize: 14, fontWeight: 500, letterSpacing: ".01em" }}>
+                  {n}
+                </a>
+              ))}
+            </nav>
+          )}
 
-          <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
-            {/* Theme toggle */}
-            <button onClick={() => setDark(d => !d)} style={{ background: "none", border: `1px solid ${bdr}`, borderRadius: 8, width: 36, height: 36, cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "center", color: fg, fontSize: 16, transition: "border-color .2s" }} title="Toggle theme">
+          {/* ── RIGHT CONTROLS ── */}
+          <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
+            {/* Theme toggle — always visible */}
+            <button onClick={() => setDark(d => !d)}
+              style={{ background: "none", border: `1px solid ${bdr}`, borderRadius: 8, width: 36, height: 36, cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "center", color: fg, fontSize: 15 }}
+              title="Toggle theme">
               {dark ? "◑" : "◐"}
             </button>
 
             {/* CTA — desktop only */}
-            <button className="desk-nav" style={{ background: fg, color: bg, border: "none", borderRadius: 8, padding: "9px 20px", fontFamily: "'DM Sans', sans-serif", fontSize: 13, fontWeight: 600, cursor: "pointer", letterSpacing: ".01em" }}>
-              Start a Project
-            </button>
+            {!isMobile && (
+              <button style={{ background: fg, color: bg, border: "none", borderRadius: 8, padding: "9px 20px", fontFamily: "'DM Sans', sans-serif", fontSize: 13, fontWeight: 600, cursor: "pointer" }}>
+                Start a Project
+              </button>
+            )}
 
             {/* Hamburger — mobile only */}
-            <button className="mob-only" onClick={() => setMenuOpen(o => !o)} style={{ background: "none", border: `1px solid ${bdr}`, borderRadius: 8, width: 36, height: 36, cursor: "pointer", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: 5 }}>
-              <span style={{ display: "block", width: 18, height: 1.5, background: fg, transition: "all .25s", transform: menuOpen ? "rotate(45deg) translate(4px, 4px)" : "none" }} />
-              <span style={{ display: "block", width: 18, height: 1.5, background: fg, transition: "all .25s", opacity: menuOpen ? 0 : 1 }} />
-              <span style={{ display: "block", width: 18, height: 1.5, background: fg, transition: "all .25s", transform: menuOpen ? "rotate(-45deg) translate(4px, -4px)" : "none" }} />
-            </button>
+            {isMobile && (
+              <button onClick={() => setMenuOpen(o => !o)}
+                style={{ background: "none", border: `1px solid ${bdr}`, borderRadius: 8, width: 36, height: 36, cursor: "pointer", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: 5 }}>
+                <span style={{ display: "block", width: 18, height: 1.5, background: fg, transition: "all .25s", transform: menuOpen ? "rotate(45deg) translate(4px, 4px)" : "none" }} />
+                <span style={{ display: "block", width: 18, height: 1.5, background: fg, transition: "all .25s", opacity: menuOpen ? 0 : 1 }} />
+                <span style={{ display: "block", width: 18, height: 1.5, background: fg, transition: "all .25s", transform: menuOpen ? "rotate(-45deg) translate(4px, -4px)" : "none" }} />
+              </button>
+            )}
           </div>
         </div>
 
-        {/* Mobile menu */}
-        <div style={{ overflow: "hidden", maxHeight: menuOpen ? 400 : 0, transition: "max-height .35s ease", background: bg, borderBottom: menuOpen ? `1px solid ${bdr}` : "none" }}>
-          <div style={{ padding: "20px 24px 28px", display: "flex", flexDirection: "column", gap: 0 }}>
-            {NAV.map(n => (
-              <a key={n} href={`#${n.toLowerCase()}`} style={{ color: fg, textDecoration: "none", fontSize: 22, fontWeight: 600, fontFamily: "'Outfit', sans-serif", padding: "12px 0", borderBottom: `1px solid ${bdr}` }}
+        {/* ── MOBILE DROPDOWN ── */}
+        {isMobile && (
+          <div style={{ overflow: "hidden", maxHeight: menuOpen ? 420 : 0, transition: "max-height .35s ease", background: bg, borderBottom: menuOpen ? `1px solid ${bdr}` : "none" }}>
+            <div style={{ padding: "16px 24px 28px", display: "flex", flexDirection: "column" }}>
+              {NAV.map((n, i, arr) => (
+                <a key={n} href={`#${n.toLowerCase()}`}
+                  style={{ color: fg, textDecoration: "none", fontSize: 22, fontWeight: 600, fontFamily: "'Outfit', sans-serif", padding: "14px 0", borderBottom: i < arr.length - 1 ? `1px solid ${bdr}` : "none", display: "block" }}
+                  onClick={() => setMenuOpen(false)}>
+                  {n}
+                </a>
+              ))}
+              <button style={{ marginTop: 20, background: fg, color: bg, border: "none", borderRadius: 8, padding: "14px", fontFamily: "'DM Sans', sans-serif", fontSize: 15, fontWeight: 600, cursor: "pointer" }}
                 onClick={() => setMenuOpen(false)}>
-                {n}
-              </a>
-            ))}
-            <button style={{ marginTop: 20, background: fg, color: bg, border: "none", borderRadius: 8, padding: "14px", fontFamily: "'DM Sans', sans-serif", fontSize: 15, fontWeight: 600, cursor: "pointer" }}>
-              Start a Project
-            </button>
+                Start a Project
+              </button>
+            </div>
           </div>
-        </div>
+        )}
       </header>
 
       {/* ══ HERO ══ */}
