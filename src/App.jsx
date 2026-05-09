@@ -388,7 +388,7 @@ export default function ByteKraft() {
           </span>
           <div style={{ display: "flex", gap: 24, flexWrap: "wrap" }}>
             {["Twitter", "GitHub", "LinkedIn", "Telegram"].map(l => (
-              <a key={l} href="#" style={{ color: fg, textDecoration: "none", fontSize: 13, fontWeight: 500, opacity: .45 }}>{l}</a>
+              <a key={l} href="https://x.com/Joseph_mandem" style={{ color: fg, textDecoration: "none", fontSize: 13, fontWeight: 500, opacity: .45 }}>{l}</a>
             ))}
           </div>
           <span style={{ fontSize: 12, opacity: .3, letterSpacing: ".04em" }}>© 2026 SATURN-LAB</span>
