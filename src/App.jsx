@@ -212,11 +212,11 @@ export default function ByteKraft() {
                 <span style={{ width: 12, height: 12, borderRadius: "50%", background: "#FF5F56", display: "inline-block" }} />
                 <span style={{ width: 12, height: 12, borderRadius: "50%", background: "#FFBD2E", display: "inline-block" }} />
                 <span style={{ width: 12, height: 12, borderRadius: "50%", background: "#27C93F", display: "inline-block" }} />
-                <span style={{ fontFamily: "'DM Mono', 'Space Mono', monospace", fontSize: 11, color: fg, opacity: .35, marginLeft: "auto" }}>bytekraft.sh</span>
+                <span style={{ fontFamily: "'DM Mono', 'Space Mono', monospace", fontSize: 11, color: fg, opacity: .35, marginLeft: "auto" }}>saturn-lab.sh</span>
               </div>
               {/* Body */}
               <div style={{ padding: "22px 24px 28px", fontFamily: "'DM Mono', 'Space Mono', monospace", fontSize: 13, lineHeight: 2.1 }}>
-                <p style={{ color: fg, opacity: .35 }}>$ <span style={{ color: fg, opacity: 1, fontWeight: 700 }}>init</span> bytekraft --type agency</p>
+                <p style={{ color: fg, opacity: .35 }}>$ <span style={{ color: fg, opacity: 1, fontWeight: 700 }}>init</span> saturn-lab--type agency</p>
                 <p style={{ color: fg, opacity: .4 }}>▸ Loading stack...</p>
                 {["React + TypeScript", "Supabase + Edge Functions", "Web3 / ethers.js", "Paystack + Stripe"].map(item => (
                   <p key={item} style={{ color: fg }}><span style={{ color: GREEN }}>✓</span> {item}</p>
@@ -391,7 +391,7 @@ export default function ByteKraft() {
               <a key={l} href="#" style={{ color: fg, textDecoration: "none", fontSize: 13, fontWeight: 500, opacity: .45 }}>{l}</a>
             ))}
           </div>
-          <span style={{ fontSize: 12, opacity: .3, letterSpacing: ".04em" }}>© 2026 BYTEKRAFT</span>
+          <span style={{ fontSize: 12, opacity: .3, letterSpacing: ".04em" }}>© 2026 SATURN-LAB</span>
         </div>
       </footer>
     </div>
