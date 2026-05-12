@@ -68,7 +68,7 @@ const NAV = ["Services", "Work", "Stack", "Contact"];
 const GREEN = "#06b646";
 
 /* ─── COMPONENT ─────────────────────────────────────────── */
-export default function ByteKraft() {
+export default function saturnlab() {
   const [dark, setDark] = useState(true);
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
