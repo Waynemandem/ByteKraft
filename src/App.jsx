@@ -106,7 +106,7 @@ export default function saturnlab() {
 
           {/* Logo */}
           <a href="#" style={{ textDecoration: "none", color: fg, fontFamily: "'Outfit', sans-serif", fontWeight: 700, fontSize: 18, letterSpacing: "-.02em", flexShrink: 0 }}>
-            Byte<span style={{ color: GREEN }}>Kraft</span>
+            Saturn<span style={{ color: GREEN }}>Lab</span>
           </a>
 
           {/* ── DESKTOP NAV ── */}
@@ -178,7 +178,7 @@ export default function saturnlab() {
               Software Agency
             </p>
             <p style={{ fontSize: "clamp(15px, 1.8vw, 18px)", lineHeight: 1.7, marginBottom: 40, fontWeight: 400, maxWidth: 440 }}>
-              ByteKraft ships Web3 infrastructure and business-grade web products from DeFi protocols to e-commerce platforms.
+              Saturn Lab ships Web3 infrastructure and business-grade web products from DeFi protocols to e-commerce platforms.
             </p>
             <div style={{ display: "flex", gap: 12, flexWrap: "wrap", marginBottom: 64 }}>
               <a href="#services" style={{ background: fg, color: bg, textDecoration: "none", borderRadius: 100, padding: "13px 28px", fontSize: 14, fontWeight: 600, display: "inline-block" }}
@@ -212,11 +212,11 @@ export default function saturnlab() {
                 <span style={{ width: 12, height: 12, borderRadius: "50%", background: "#FF5F56", display: "inline-block" }} />
                 <span style={{ width: 12, height: 12, borderRadius: "50%", background: "#FFBD2E", display: "inline-block" }} />
                 <span style={{ width: 12, height: 12, borderRadius: "50%", background: "#27C93F", display: "inline-block" }} />
-                <span style={{ fontFamily: "'DM Mono', 'Space Mono', monospace", fontSize: 11, color: fg, opacity: .35, marginLeft: "auto" }}>bytekraft.sh</span>
+                <span style={{ fontFamily: "'DM Mono', 'Space Mono', monospace", fontSize: 11, color: fg, opacity: .35, marginLeft: "auto" }}>saturn-lab.sh</span>
               </div>
               {/* Body */}
               <div style={{ padding: "22px 24px 28px", fontFamily: "'DM Mono', 'Space Mono', monospace", fontSize: 13, lineHeight: 2.1 }}>
-                <p style={{ color: fg, opacity: .35 }}>$ <span style={{ color: fg, opacity: 1, fontWeight: 700 }}>init</span> bytekraft --type agency</p>
+                <p style={{ color: fg, opacity: .35 }}>$ <span style={{ color: fg, opacity: 1, fontWeight: 700 }}>init</span> saturn-lab--type agency</p>
                 <p style={{ color: fg, opacity: .4 }}>▸ Loading stack...</p>
                 {["React + TypeScript", "Supabase + Edge Functions", "Web3 / ethers.js", "Paystack + Stripe"].map(item => (
                   <p key={item} style={{ color: fg }}><span style={{ color: GREEN }}>✓</span> {item}</p>
@@ -318,7 +318,7 @@ export default function saturnlab() {
                 We don't chase trends. Every tool in our stack is production-tested — chosen for speed, reliability, and the ability to ship at scale.
               </p>
               <p style={{ fontSize: 16, lineHeight: 1.75, color: fg }}>
-                From React frontends to Supabase backends and on-chain Solidity logic, the same stack powers every ByteKraft project.
+                From React frontends to Supabase backends and on-chain Solidity logic, the same stack powers every Saturn-Lab project.
               </p>
             </div>
 
@@ -333,7 +333,7 @@ export default function saturnlab() {
             <Label fg={fg} green={GREEN}>About</Label>
             <h2 className="section-title" style={{ color: fg, marginBottom: 28 }}>Built different.<br />Wired for results.</h2>
             <p style={{ fontSize: 17, lineHeight: 1.75, color: fg, marginBottom: 20 }}>
-              ByteKraft operates at a rare intersection — deep crypto and Web3 expertise paired with proven experience scaling businesses online.
+              Saturn Lab operates at a rare intersection — deep crypto and Web3 expertise paired with proven experience scaling businesses online.
             </p>
             <p style={{ fontSize: 17, lineHeight: 1.75, color: fg }}>
               We don't outsource, we don't cut corners. Every project gets the same rigour whether it's a DeFi protocol or a local brand's digital presence.
@@ -384,14 +384,14 @@ export default function saturnlab() {
       <footer style={{ padding: "32px 0", borderTop: `1px solid ${bdr}`, background: bg, transition: "background .3s" }}>
         <div className="container" style={{ display: "flex", alignItems: "center", justifyContent: "space-between", flexWrap: "wrap", gap: 16 }}>
           <span style={{ fontFamily: "'Outfit', sans-serif", fontWeight: 700, fontSize: 16, letterSpacing: "-.01em" }}>
-            Byte<span style={{ color: GREEN }}>Kraft</span>
+            Saturn<span style={{ color: GREEN }}>Lab</span>
           </span>
           <div style={{ display: "flex", gap: 24, flexWrap: "wrap" }}>
             {["Twitter", "GitHub", "LinkedIn", "Telegram"].map(l => (
-              <a key={l} href="#" style={{ color: fg, textDecoration: "none", fontSize: 13, fontWeight: 500, opacity: .45 }}>{l}</a>
+              <a key={l} href="https://x.com/Joseph_mandem" style={{ color: fg, textDecoration: "none", fontSize: 13, fontWeight: 500, opacity: .45 }}>{l}</a>
             ))}
           </div>
-          <span style={{ fontSize: 12, opacity: .3, letterSpacing: ".04em" }}>© 2026 BYTEKRAFT</span>
+          <span style={{ fontSize: 12, opacity: .3, letterSpacing: ".04em" }}>© 2026 SATURN-LAB</span>
         </div>
       </footer>
     </div>
