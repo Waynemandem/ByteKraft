@@ -73,7 +73,7 @@ const GREEN = "#06b646";
 // 2. Create a New Form
 // 3. Copy the ID from the endpoint URL
 //    e.g. https://formspree.io/f/xyzabcde  →  paste "xyzabcde"
-const FORMSPREE_ID = "YOUR_FORM_ID";
+const FORMSPREE_ID = "https://formspree.io/f/mbdwnvdd";
 // ─────────────────────────────────────────────────────────
 
 /* ─── COMPONENT ─────────────────────────────────────────── */
