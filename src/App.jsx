@@ -73,7 +73,7 @@ const GREEN = "#06b646";
 // 2. Create a New Form
 // 3. Copy the ID from the endpoint URL
 //    e.g. https://formspree.io/f/xyzabcde  →  paste "xyzabcde"
-const FORMSPREE_ID = "https://formspree.io/f/mbdwnvdd";
+const formId = import.meta.env.VITE_FORMSPREE_FORM_ID
 // ─────────────────────────────────────────────────────────
 
 /* ─── COMPONENT ─────────────────────────────────────────── */
@@ -135,7 +135,7 @@ export default function Saturnlab() {
     if (!form.name || !form.email) return;
     setModalLoading(true);
     try {
-      await fetch(`https://formspree.io/f/${FORMSPREE_ID}`, {
+      await fetch(`https://formspree.io/f/${formId}`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -157,7 +157,7 @@ export default function Saturnlab() {
     if (!ctaEmail) return;
     setCtaLoading(true);
     try {
-      await fetch(`https://formspree.io/f/mbdwnvdd`, {
+      await fetch(`https://formspree.io/f/${formId}`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
