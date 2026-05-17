@@ -135,7 +135,7 @@ export default function Saturnlab() {
     if (!form.name || !form.email) return;
     setModalLoading(true);
     try {
-      await fetch(`https://formspree.io/f/${formId}`, {
+      await fetch(`https://formspree.io/f/${import.meta.env.VITE_FORMSPREE_FORM_ID}`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -147,7 +147,7 @@ export default function Saturnlab() {
       });
       setModalSent(true);
     } catch {
-      alert("Something went wrong. Please try again.");
+      alert("Failed to send. Please email us directly at saturnlab@gmail.dev");
     }
     setModalLoading(false);
   };
@@ -157,7 +157,7 @@ export default function Saturnlab() {
     if (!ctaEmail) return;
     setCtaLoading(true);
     try {
-      await fetch(`https://formspree.io/f/${formId}`, {
+      await fetch(`https://formspree.io/f/${import.meta.env.VITE_FORMSPREE_FORM_ID}`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -221,7 +221,7 @@ export default function Saturnlab() {
 
                 <FieldLabel fg={fg}>Your Name *</FieldLabel>
                 <input
-                  type="text" placeholder="John Doe"
+                  type="text" 
                   value={form.name}
                   onChange={e => setForm(p => ({ ...p, name: e.target.value }))}
                   style={inputStyle(surf, bdr, fg)}
@@ -229,7 +229,7 @@ export default function Saturnlab() {
 
                 <FieldLabel fg={fg}>Email Address *</FieldLabel>
                 <input
-                  type="email" placeholder="you@example.com"
+                  type="email" 
                   value={form.email}
                   onChange={e => setForm(p => ({ ...p, email: e.target.value }))}
                   style={inputStyle(surf, bdr, fg)}
