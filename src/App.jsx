@@ -211,7 +211,7 @@ export default function Saturnlab() {
             ) : (
               /* Form */
               <>
-                <p style={{ fontSize: 11, fontWeight: 700, letterSpacing: ".18em", color: GREEN, marginBottom: 10, textTransform: "uppercase" }}>Saturn Lab</p>
+                <p style={{ fontSize: 11, fontWeight: 700, letterSpacing: ".18em", color: GREEN, marginBottom: 10, textTransform: "uppercase" }}>Axion Digital</p>
                 <h3 style={{ fontFamily: "'Outfit', sans-serif", fontSize: 28, fontWeight: 700, color: fg, marginBottom: 8, letterSpacing: "-.02em" }}>
                   Start a Project
                 </h3>
@@ -271,7 +271,7 @@ export default function Saturnlab() {
         <div className="container" style={{ display: "flex", alignItems: "center", justifyContent: "space-between", height: 64, width: "100%" }}>
 
           <a href="#" style={{ textDecoration: "none", color: fg, fontFamily: "'Outfit', sans-serif", fontWeight: 700, fontSize: 18, letterSpacing: "-.02em", flexShrink: 0 }}>
-            Saturn<span style={{ color: GREEN }}>Lab</span>
+            Axion<span style={{ color: GREEN }}>Digital</span>
           </a>
 
           {!isMobile && (
@@ -347,7 +347,7 @@ export default function Saturnlab() {
               We build<br />software<br />that works.
             </h1>
             <p style={{ fontSize: "clamp(15px, 1.8vw, 18px)", lineHeight: 1.7, marginBottom: 40, fontWeight: 400, maxWidth: 440, color: fg }}>
-              Saturn Lab ships Web3 infrastructure and business-grade web products — from DeFi protocols to e-commerce platforms.
+              Axion Digital ships Web3 infrastructure and business-grade web products from DeFi protocols to e-commerce platforms.
             </p>
             <div style={{ display: "flex", gap: 12, flexWrap: "wrap", marginBottom: 64 }}>
               <a href="#services"
@@ -380,10 +380,10 @@ export default function Saturnlab() {
                 <span style={{ width: 12, height: 12, borderRadius: "50%", background: "#FF5F56", display: "inline-block" }} />
                 <span style={{ width: 12, height: 12, borderRadius: "50%", background: "#FFBD2E", display: "inline-block" }} />
                 <span style={{ width: 12, height: 12, borderRadius: "50%", background: "#27C93F", display: "inline-block" }} />
-                <span style={{ fontFamily: "'DM Mono', 'Space Mono', monospace", fontSize: 11, color: fg, opacity: .35, marginLeft: "auto" }}>saturn-lab.sh</span>
+                <span style={{ fontFamily: "'DM Mono', 'Space Mono', monospace", fontSize: 11, color: fg, opacity: .35, marginLeft: "auto" }}>AxionDigital.sh</span>
               </div>
               <div style={{ padding: "22px 24px 28px", fontFamily: "'DM Mono', 'Space Mono', monospace", fontSize: 13, lineHeight: 2.1 }}>
-                <p style={{ color: fg, opacity: .35 }}>$ <span style={{ color: fg, opacity: 1, fontWeight: 700 }}>init</span> saturn-lab --type agency</p>
+                <p style={{ color: fg, opacity: .35 }}>$ <span style={{ color: fg, opacity: 1, fontWeight: 700 }}>init</span> Axion Digital --type agency</p>
                 <p style={{ color: fg, opacity: .4 }}>▸ Loading stack...</p>
                 {["React + TypeScript", "Supabase + Edge Functions", "Web3 / ethers.js", "Paystack + Stripe"].map(item => (
                   <p key={item} style={{ color: fg }}><span style={{ color: GREEN }}>✓</span> {item}</p>
@@ -472,10 +472,10 @@ export default function Saturnlab() {
             <div style={{ paddingTop: 8 }}>
               <h3 style={{ fontFamily: "'Outfit', sans-serif", fontSize: 26, fontWeight: 700, letterSpacing: "-.02em", marginBottom: 20, color: fg }}>Proven tools.<br />Reliable results.</h3>
               <p style={{ fontSize: 16, lineHeight: 1.75, color: fg, marginBottom: 24 }}>
-                We don't chase trends. Every tool in our stack is production-tested — chosen for speed, reliability, and the ability to ship at scale.
+                We don't chase trends. Every tool in our stack is production-tested, chosen for speed, reliability, and the ability to ship at scale.
               </p>
               <p style={{ fontSize: 16, lineHeight: 1.75, color: fg }}>
-                From React frontends to Supabase backends and on-chain Solidity logic, the same stack powers every Saturn Lab project.
+                From React frontends to Supabase backends and on-chain Solidity logic, the same stack powers every Axion Digital project.
               </p>
             </div>
           </div>
@@ -487,9 +487,9 @@ export default function Saturnlab() {
         <div className="container" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 80, alignItems: "center" }}>
           <div>
             <Label fg={fg} green={GREEN}>About</Label>
-            <h2 className="section-title" style={{ color: fg, marginBottom: 28 }}>Built different.<br />Wired for results.</h2>
+            <h2 className="section-title" style={{ colr: fg, marginBottom: 28 }}>Built different.<br />Wired for results.</h2>
             <p style={{ fontSize: 17, lineHeight: 1.75, color: fg, marginBottom: 20 }}>
-              Saturn Lab operates at a rare intersection — deep crypto and Web3 expertise paired with proven experience scaling businesses online.
+              Axion Digital operates at a rare intersection deep crypto and Web3 expertise paired with proven experience scaling businesses online.
             </p>
             <p style={{ fontSize: 17, lineHeight: 1.75, color: fg }}>
               We don't outsource, we don't cut corners. Every project gets the same rigour whether it's a DeFi protocol or a local brand's digital presence.
@@ -555,12 +555,12 @@ export default function Saturnlab() {
       <footer style={{ padding: "32px 0", borderTop: `1px solid ${bdr}`, background: bg, transition: "background .3s" }}>
         <div className="container" style={{ display: "flex", alignItems: "center", justifyContent: "space-between", flexWrap: "wrap", gap: 16 }}>
           <span style={{ fontFamily: "'Outfit', sans-serif", fontWeight: 700, fontSize: 16, letterSpacing: "-.01em", color: fg }}>
-            Saturn<span style={{ color: GREEN }}>Lab</span>
+            Axion<span style={{ color: GREEN }}>Digital</span>
           </span>
           <div style={{ display: "flex", gap: 24, flexWrap: "wrap" }}>
             {[
               { label: "Twitter", url: "https://x.com/Joseph_mandem" },
-              { label: "GitHub",   url: "https://github.com" },
+              { label: "GitHub",   url: "https://github.com/Waynemandem" },
               { label: "LinkedIn", url: "https://linkedin.com" },
               { label: "Telegram", url: "https://t.me" },
             ].map(l => (
@@ -570,7 +570,7 @@ export default function Saturnlab() {
               </a>
             ))}
           </div>
-          <span style={{ fontSize: 12, color: fg, opacity: .3, letterSpacing: ".04em" }}>© 2026 SATURN-LAB</span>
+          <span style={{ fontSize: 12, color: fg, opacity: .3, letterSpacing: ".04em" }}>© 2026 AXION-DIGITAL</span>
         </div>
       </footer>
     </div>
