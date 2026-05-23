@@ -77,7 +77,7 @@ const formId = import.meta.env.VITE_FORMSPREE_FORM_ID
 // ─────────────────────────────────────────────────────────
 
 /* ─── COMPONENT ─────────────────────────────────────────── */
-export default function Saturnlab() {
+export default function AxionDigital() {
   const [dark, setDark] = useState(true);
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -142,12 +142,12 @@ export default function Saturnlab() {
           name: form.name,
           email: form.email,
           message: form.message,
-          _subject: "New Project Enquiry — Saturn Lab",
+          _subject: "New Project Enquiry — Axion Digital",
         }),
       });
       setModalSent(true);
     } catch {
-      alert("Failed to send. Please email us directly at saturnlab@gmail.dev");
+      alert("Failed to send. Please email us directly at axiondigital@gmail.dev");
     }
     setModalLoading(false);
   };
@@ -162,7 +162,7 @@ export default function Saturnlab() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           email: ctaEmail,
-          _subject: "New Lead — Saturn Lab CTA",
+          _subject: "New Lead — Axion Digital CTA",
         }),
       });
       setCtaSent(true);
