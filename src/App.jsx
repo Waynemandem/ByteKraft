@@ -86,7 +86,7 @@ const PRODUCTS = [
     tags: ["AI", "SaaS", "Resume", "Career"],
     color: "#5B3FA6",
     stats: [
-      { val: "3", label: "Templates" },
+      { val: "30+", label: "Templates" },
       { val: "AI", label: "Powered" },
       { val: "PDF", label: "Export" },
     ],
@@ -96,26 +96,26 @@ const PRODUCTS = [
     tagline: "Solar marketplace for Nigeria",
     desc: "Connecting solar suppliers with customers across Nigeria. Browse products, compare prices, and pay securely with Paystack.",
     status: "LIVE",
-    url: "#",
+    url: "https://trendit-solar.vercel.app",
     tags: ["E-Commerce", "Solar", "Green Energy"],
     color: "#FF9500",
     stats: [
-      { val: "50+", label: "Products" },
+      { val: "20+", label: "Products" },
       { val: "₦2.4M", label: "Sales" },
       { val: "NGN", label: "Paystack" },
     ],
   },
   {
-    name: "CoinPulse",
+    name: "Apex-trader",
     tagline: "Real-time meme coin tracker",
-    desc: "Track meme coins in real time with tiered subscription plans, live price feeds, and portfolio analytics.",
+    desc: "Track coins in real time with Alert system, live price feeds, and candlestick charts.",
     status: "LIVE",
-    url: "#",
+    url: "https://apextrader-beta.vercel.app/",
     tags: ["Crypto", "SaaS", "DeFi"],
     color: "#06b646",
     stats: [
-      { val: "500+", label: "Users" },
-      { val: "3", label: "Tiers" },
+      { val: "100+", label: "Users" },
+      { val: "<1 seconds", label: "Realtime Alert" },
       { val: "Live", label: "Prices" },
     ],
   },
@@ -159,7 +159,7 @@ const WHY = [
   { title: "We ship fast",       desc: "Most projects delivered in 1–3 weeks." },
   { title: "No outsourcing",     desc: "Every line of code written in-house." },
   { title: "Results focused",    desc: "We measure success by your revenue." },
-  { title: "Full stack",         desc: "Design, dev, and deployment — one roof." },
+  { title: "Full stack",         desc: "Design, dev, and deployment in one roof." },
   { title: "Africa-native",      desc: "Paystack, Flutterwave, local context built in." },
   { title: "Post-launch support",desc: "30 days free support after every project." },
 ];
@@ -462,7 +462,7 @@ export default function AxionDigital() {
           <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-end", flexWrap: "wrap", gap: 24, marginBottom: 56 }}>
             <h2 className="section-title" style={{ color: fg, marginBottom: 0 }}>What we build for you.</h2>
             <p style={{ fontSize: 15, color: fg, opacity: .5, maxWidth: 360, lineHeight: 1.75 }}>
-              Strategy, design, development, and launch — all under one roof.
+              Strategy, design, development, and launch, all under one roof.
             </p>
           </div>
 
