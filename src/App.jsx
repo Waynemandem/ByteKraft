@@ -20,7 +20,7 @@ const SERVICES = [
     id: "03",
     category: "SAAS",
     title: "SaaS Product Development",
-    desc: "Full-stack SaaS platforms from MVP to production. Auth, billing, dashboards, and integrations — shipped fast.",
+    desc: "Full-stack SaaS platforms from MVP to production. Auth, billing, dashboards, and integrations, Shipped fast.",
     tags: ["React", "Supabase", "Stripe", "Paystack"],
   },
   {
@@ -45,7 +45,7 @@ const WORKS = [
     num: "01",
     name: "Solar Trendit",
     tags: ["E-Commerce", "Business Growth"],
-    desc: "Full-stack solar marketplace connecting suppliers with customers — product catalog, lead gen, and Paystack checkout.",
+    desc: "Full-stack solar marketplace connecting suppliers with customers, product catalog, lead gen and Paystack checkout.",
     result: "₦2.4M in sales · First 60 days",
     color: "#FF9500",
   },
@@ -125,7 +125,7 @@ const STATS = [
   { val: "10+", label: "Projects Shipped" },
   { val: "3",   label: "Live Products" },
   { val: "98%", label: "Client Retention" },
-  { val: "4",   label: "Countries" },
+  { val: "2",   label: "Countries" },
 ];
 
 const RESULTS = [
@@ -143,12 +143,12 @@ const RESULTS = [
   },
   {
     metric: "500+",
-    context: "active users on CoinPulse SaaS within the first month of launch.",
+    context: "active users on Apex trader within the first month of launch.",
     tag: "SaaS",
     color: "#5B3FA6",
   },
   {
-    metric: "$1.2M",
+    metric: "$50k",
     context: "TVL reached on ChainVault DeFi platform in the first week.",
     tag: "Web3",
     color: "#FF4D00",
@@ -645,7 +645,7 @@ export default function AxionDigital() {
             <div>
               <h2 className="section-title" style={{ color: fg, marginBottom: 20 }}>How we build it.</h2>
               <p style={{ fontSize: 15, color: fg, opacity: .55, lineHeight: 1.85, marginBottom: 20 }}>
-                We don't chase trends. Every tool is production-tested — chosen for speed, reliability, and the ability to ship at scale.
+                We don't chase trends. Every tool is production-tested, chosen for speed, reliability and the ability to ship at scale.
               </p>
               <p style={{ fontSize: 15, color: fg, opacity: .55, lineHeight: 1.85 }}>
                 From React frontends to Supabase backends and on-chain Solidity logic, the same battle-tested stack powers every Axion Digital project.
@@ -677,7 +677,7 @@ export default function AxionDigital() {
             <Label fg={fg} accent={ACCENT}>Why Axion Digital</Label>
             <h2 className="section-title" style={{ color: fg, marginBottom: 24 }}>Built different.<br />Wired for results.</h2>
             <p style={{ fontSize: 16, color: fg, opacity: .55, lineHeight: 1.85, marginBottom: 20 }}>
-              Axion Digital operates at a rare intersection — deep crypto and Web3 expertise paired with proven experience growing real businesses online.
+              Axion Digital operates at a rare intersection deep crypto and Web3 expertise paired with proven experience growing real businesses online.
             </p>
             <p style={{ fontSize: 16, color: fg, opacity: .55, lineHeight: 1.85, marginBottom: 36 }}>
               We don't outsource, we don't cut corners. Every project gets the same rigour whether it's a DeFi protocol or a local business website.
@@ -714,7 +714,7 @@ export default function AxionDigital() {
             Your competitors are<br />already here. Are you?
           </h2>
           <p style={{ fontSize: 17, lineHeight: 1.7, marginBottom: 48, color: bg, opacity: .6 }}>
-            Tell us about your business. We'll scope it, price it, and ship it — no fluff, no delays.
+            Tell us about your business. We'll scope it, price it, and ship it with no delays.
           </p>
           <div style={{ display: "flex", gap: 12, justifyContent: "center", flexWrap: "wrap", marginBottom: 16 }}>
             <button onClick={openModal} style={{ background: ACCENT, color: "#fff", border: "none", borderRadius: 8, padding: "15px 32px", fontFamily: "'DM Sans', sans-serif", fontSize: 15, fontWeight: 700, cursor: "pointer" }}>
