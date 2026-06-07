@@ -1,0 +1,18 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://axiondigital.vercel.app/sitemap.xml
+
+# Block nothing — let all crawlers in
+# Including GPTBot (ChatGPT), PerplexityBot, ClaudeBot
+User-agent: GPTBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Googlebot
+Allow: /
